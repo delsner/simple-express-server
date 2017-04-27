@@ -1,7 +1,7 @@
 import express from 'express';
 import jade from 'jade';
 import path from 'path';
-import routes from './src/main.routes';
+import routes from './src/routes';
 
 const app = express();
 
