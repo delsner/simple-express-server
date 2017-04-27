@@ -1,12 +1,15 @@
-// Import node module
 import express from 'express';
+import ContactController from './contact.controller';
+
 const router = express.Router();
 
-// Arrow functions
 router.get('/', (req, res) => {
-  res.render('index',
-  { title : 'Home' }
-);
+    res.render('index', {
+        title: 'Welcome'
+    });
 });
-// Exporting an object as the default import for this module
+
+router.get('/contact', ContactController.getContact);
+router.post('/contact', ContactController.postContact);
+
 export default router;

@@ -1,20 +1,21 @@
 {
-  "name": "node-demo",
+  "name": "simple-node-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel/bin/babel-node.js ./server.js"
+    "clean": "rm -rf dist && mkdir dist",
+    "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel/bin/babel-node.js ./index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "4.13.3"
+    "body-parser": "^1.17.1",
+    "express": "4.13.3",
+    "nodemailer": "^4.0.1"
   },
   "devDependencies": {
     "babel": "5.8.29",
-    "jade": "^1.11.0",
-    "nodemon": "1.8.0"
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "1.8.0",
+    "pug": "^2.0.0-beta.12"
   }
 }
